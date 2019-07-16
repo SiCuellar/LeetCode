@@ -9,7 +9,6 @@ class MvTest < Minitest::Test
   end
 
   def test_it_can_move_zero_to_the_end
-    skip
     mv = Mv.new
     assert_equal [1,0], mv.move_zeros([0,1])
   end
@@ -17,6 +16,11 @@ class MvTest < Minitest::Test
   def test_can_move_multiple_zeros_to_end
     mv = Mv.new
     assert_equal [1,3,12,0,0], mv.move_zeros([0,1,0,3,12])
+  end
+
+  def test_it_functions_when_zeros_are_already_in_the_rear
+    mv = Mv.new
+    assert_equal [1,3,12,0,0,0,0], mv.move_zeros([0,1,0,3,12,0,0])
   end
 
 end
