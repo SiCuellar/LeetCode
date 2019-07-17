@@ -13,8 +13,8 @@ class RomToInt
     }
 
     values = []
-
-    roman_int.split.each do |char|
+    # binding.pry
+    roman_int.chars.each do |char|
       values << map[char]
     end
     values.sum
