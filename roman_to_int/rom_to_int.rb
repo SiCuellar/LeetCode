@@ -13,11 +13,17 @@ class RomToInt
     }
 
     values = []
-    # binding.pry
+
     roman_int.chars.each do |char|
       values << map[char]
     end
-    values.sum
+
+    # max_value_index = values.each_with_index.max[1]
+    neg = values.slice_before(values.max).to_a.first.sum
+    pos = values.slice_before(values.max).to_a[1].sum
+    # binding.pry
+
+    pos - neg
   end
 
 end
