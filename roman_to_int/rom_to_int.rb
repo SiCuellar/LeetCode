@@ -18,14 +18,16 @@ class RomToInt
       values << map[char]
     end
 
-    # max_value_index = values.each_with_index.max[1]
-    neg = values.slice_before(values.max).to_a.first.sum
-    pos = values.slice_before(values.max).to_a[1].sum
-    # binding.pry
+    max_value_index = values.each_with_index.max[1]
 
-    pos - neg
+    if max_value_index != 0 && values.sum > 3
+      neg = values.slice_before(values.max).to_a.first.sum
+      pos = values.slice_before(values.max).to_a[1].sum
+      pos - neg
+    else
+      values.sum
+    end
   end
-
 end
 
 
