@@ -39,5 +39,15 @@ class RomToIntTest < Minitest::Test
     assert_equal 4, rti.roman_to_int("IV")
   end
 
+  def test_it_can_conver_numbers_L
+    rti = RomToInt.new
+    assert_equal 58, rti.roman_to_int("LVIII")
+  end
+
+  def test_it_can_convert_C
+    rti = RomToInt.new
+    assert_equal 1994, rti.roman_to_int("MCMXCIV")
+  end
+
 
 end
