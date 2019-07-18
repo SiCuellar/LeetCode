@@ -48,6 +48,4 @@ class RomToIntTest < Minitest::Test
     rti = RomToInt.new
     assert_equal 1994, rti.roman_to_int("MCMXCIV")
   end
-
-
 end
