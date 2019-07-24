@@ -25,6 +25,7 @@ class RomToInt
     end
     res
   end
+end
 #   map = {
 #     "I" => 1,
 #     "V" => 5,
@@ -50,7 +51,6 @@ class RomToInt
 #       values.sum
 #     end
 #   end
-end
 
 
 # create a ranking map that containse what each letter is worth in values
