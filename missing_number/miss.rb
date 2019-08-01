@@ -9,5 +9,8 @@ class Miss
         return num
       end
     end
+    return range[-1] + 1
   end
 end
+
+#checks to see if the numbers missing are within the array else we add one to last number
