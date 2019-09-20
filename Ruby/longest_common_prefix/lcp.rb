@@ -1,6 +1,13 @@
 require "pry"
 
 class Lcp
+  def longest_common_pre(words)
+    words.each_with_index do |word, index|
+      binding.pry
+      word_compare(word, words[index+1])
+    end
+  end
+
   def word_parser(word)
     word.chars
   end
