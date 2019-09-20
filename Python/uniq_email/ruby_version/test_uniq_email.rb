@@ -42,9 +42,13 @@ class UniqEmailTest < Minitest::Test
     uniq_email = UniqEmail.new
     email = "m.y+name@em+ail.com"
     assert_equal "my@em+ail.com", uniq_email.email_plus_filter(email)
+  end
 
-
-  # def test_it
+  def test_it_can_recognize_uniq_emails
+    uniq_email = UniqEmail.new
+    email_collection = ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
+    assert_equal 2, uniq_email.num_uniq_emails(email_collection)
+  end
 end
 
 # Every emailpyp consists of a local name and a domain name, separated by the @ sign.

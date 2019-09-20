@@ -2,7 +2,9 @@ require 'pry'
 
 class UniqEmail
   def num_uniq_emails(emails)
-    binding.pry
+    emails.map do |email|
+      email_plus_filter(email)
+    end.uniq.count
   end
 
   def local_name(email)
