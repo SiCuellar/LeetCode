@@ -1,3 +1,3 @@
-
-class UniqEmail():
-    def numUniqEmails(emails):
+class UniqEmail(object):
+    def numUniqueEmails(self, emails):
+        pass
