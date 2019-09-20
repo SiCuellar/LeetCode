@@ -1,7 +1,7 @@
 require 'pry'
 
 class UniqEmail
-  def num_uniq_emails(emails)
+  def num_unique_emails(emails)
     emails.map do |email|
       email_plus_filter(email)
     end.uniq.count

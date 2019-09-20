@@ -47,7 +47,13 @@ class UniqEmailTest < Minitest::Test
   def test_it_can_recognize_uniq_emails
     uniq_email = UniqEmail.new
     email_collection = ["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]
-    assert_equal 2, uniq_email.num_uniq_emails(email_collection)
+    assert_equal 2, uniq_email.num_unique_emails(email_collection)
+  end
+
+  def test_it_can_recognize_uniq_emails_that_contain
+    uniq_email = UniqEmail.new
+    emails = ["test.email+alex@leetcode.com", "test.email@leetcode.com"]
+    assert_equal 1, uniq_email.num_unique_emails(emails)
   end
 end
 
