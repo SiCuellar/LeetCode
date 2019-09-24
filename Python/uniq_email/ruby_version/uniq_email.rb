@@ -22,7 +22,12 @@ class UniqEmail
 
   def email_plus_filter(email)
     local_dot_clean = email_dot_cleaner_converter(email)
-    plus_filtered = local_dot_clean.split("+").first
-    plus_filtered + "@" + domain_name(email)
+
+    if local_dot_clean.include?("+")
+      plus_filtered = local_dot_clean.split("+").first
+      plus_filtered + "@" + domain_name(email)
+    else
+      local_dot_clean
+    end
   end
 end
