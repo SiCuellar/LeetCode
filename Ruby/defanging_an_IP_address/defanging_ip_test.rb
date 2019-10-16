@@ -7,4 +7,17 @@ class DefangingIpTest < Minitest::Test
     defang_ip = DefangIp.new
     assert_instance_of DefangIp, defang_ip
   end
+
+  def test_it_can_return_array_of_ip_numbers
+    skip
+    defang_ip = DefangIp.new
+    address = "1.1.1.1"
+    assert_equal ["1","1","1","1"], defang_ip.defang_i_paddr(address)
+  end
+
+  def test_it_can_join_with_bracket_periods
+    defang_ip = DefangIp.new
+    address = "1.1.1.1"
+    assert_equal "1[.]1[.]1[.]1", defang_ip.defang_i_paddr(address)
+  end
 end
