@@ -20,4 +20,10 @@ class DefangingIpTest < Minitest::Test
     address = "1.1.1.1"
     assert_equal "1[.]1[.]1[.]1", defang_ip.defang_i_paddr(address)
   end
+
+  def test_it_can_work_with_zeros
+    defang_ip = DefangIp.new
+    address = "255.100.50.0"
+    assert_equal "255[.]100[.]50[.]0", defang_ip.defang_i_paddr(address)
+  end
 end
