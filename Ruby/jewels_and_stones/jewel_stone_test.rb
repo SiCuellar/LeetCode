@@ -22,4 +22,11 @@ class JewelStoneTest < Minitest::Test
     s = "abC"
     assert_equal 1, jewel_stone.num_jewels_in_stones(j, s)
   end
+
+  def test_it_can_identify_multiple_jewels
+    jewel_stone = JewelStone.new
+    j = "abc"
+    s = "abcABC"
+    assert_equal 3, jewel_stone.num_jewels_in_stones(j, s)
+  end
 end
