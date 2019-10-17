@@ -15,4 +15,10 @@ class JewelStoneTest < Minitest::Test
     assert_equal "a", jewel_stone.num_jewels(j, s)
     assert_equal "aAbc", jewel_stone.num_stones(j, s)
   end
+
+  def test_it_can_see_if_a_single_jewel_within_stones
+    jewel_stone = JewelStone.new
+    j = "b"
+    s = "abC"
+  end
 end
