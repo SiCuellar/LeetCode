@@ -20,5 +20,6 @@ class JewelStoneTest < Minitest::Test
     jewel_stone = JewelStone.new
     j = "b"
     s = "abC"
+    assert_equal 1, jewel_stone.num_jewels_in_stones(j, s)
   end
 end
