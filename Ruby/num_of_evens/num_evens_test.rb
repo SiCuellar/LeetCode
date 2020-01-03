@@ -7,4 +7,14 @@ class NumEvensTest < Minitest::Test
     num_evens = NumEvens.new
     assert_instance_of NumEvens, num_evens
   end
+
+  def test_it_can_count_number_of_digits_in_num
+    num_evens = NumEvens.new
+    assert_equal 4, num_evens.num_count(1234)
+  end
+
+  def test_it_can_get_count_for_all_numbers
+    num_evens = NumEvens.new
+    assert_equal [4,2,1], num_evens.numbers_count([1212,34,6])
+  end
 end
