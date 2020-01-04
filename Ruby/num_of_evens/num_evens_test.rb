@@ -17,4 +17,10 @@ class NumEvensTest < Minitest::Test
     num_evens = NumEvens.new
     assert_equal [4,2,1], num_evens.numbers_count([1212,34,6])
   end
+
+  def test_it_can_return_the_count_of_even_nums
+    num_evens = NumEvens.new
+    nums = [1212,34,6]
+    assert_equal 2, num_evens.find_numbers(nums)
+  end
 end

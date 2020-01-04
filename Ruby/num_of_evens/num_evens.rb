@@ -10,4 +10,15 @@ class NumEvens
       num_count(num)
     end
   end
+
+  def find_numbers(nums)
+    word_nums = numbers_count(nums)
+    count = 0
+    word_nums.each do |num|
+      if num % 2 == 0
+        count +=1
+      end
+    end
+    count
+  end
 end
