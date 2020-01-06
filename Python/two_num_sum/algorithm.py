@@ -9,3 +9,4 @@ def twoNumberSum(array, targetSum):
             if firstNum + secondNum == targetSum:
                 return [firstNum, secondNum]
     return []
+#-------------------------------------------------------
