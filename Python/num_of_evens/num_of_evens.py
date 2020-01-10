@@ -1,3 +1,3 @@
 class Num_Even(object):
-    def __ini__(self):
-        self = sef 
+    def num_count(num):
+        return num
