@@ -2,10 +2,8 @@ require 'pry'
 
 class Program
   def rep_nums(nums)
-    nums.map do |num|
-      nums.each do |num|
-        
-      end
+    nums.each_with_index do |num, index|
+      binding.pry
     end
   end
 end
