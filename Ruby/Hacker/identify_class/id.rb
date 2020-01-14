@@ -10,6 +10,5 @@ class Id
   }
 
   def identify_class(obj)
-    binding.pry
   end
 end
