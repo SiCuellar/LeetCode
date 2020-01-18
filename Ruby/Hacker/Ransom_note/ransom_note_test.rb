@@ -16,10 +16,17 @@ class ProgramTest < Minitest::Test
     assert_equal ["give", "one"], program.check_magazine(magazine, note)
   end
 
-  def test_it_can_check_if_note_is_included_in_magazine
+  def test_it_can_check_if_word_is_included_in_magazine
     program = Program.new
     magazine = ["give", "one"]
     note = ["give"]
     assert_equal "Yes", program.check_magazine(magazine, note)
+  end
+
+  def test_it_can_check_if_note_is_included_in_magazine
+    program = Program.new
+    magazine = ["give", "one"]
+    note = ["give", "one", "dog"]
+    assert_equal "No", program.check_magazine(magazine, note)
   end
 end
