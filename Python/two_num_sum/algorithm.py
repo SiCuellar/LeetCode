@@ -24,3 +24,9 @@ def twoNumberSum(array, targetSum):
         else:
             nums[num] = True
     return []
+
+def divisible(a,b):
+    if a/b:
+        return True
+    else:
+        return False
